@@ -72,9 +72,9 @@ button.onclick = function() {
           errorMessage = "Month must be between 1 and 12";
         }
       } else if (index === 2) { 
-        if (value < 1850 || value > new Date().getFullYear()) {
+        if (value < 1400 || value > new Date().getFullYear()) {
           isValid = false;
-          errorMessage = "Year must be between 1850 and " + new Date().getFullYear();
+          errorMessage = "Year must be between 1400 and " + new Date().getFullYear();
         }
       }
     }
