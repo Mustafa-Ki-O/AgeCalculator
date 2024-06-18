@@ -57,7 +57,7 @@ button.onclick = function() {
      else {
        if(index==0 && (value < 1 || value > 31)) {
         isValid = false;
-        errorMessage = "Max value is 31 !";
+        errorMessage = "Day must be between 1 and 31";
       }
       else if (index === 0 &&( inpYearVal !="" && inpMonthVal !="")) { // day
        
@@ -72,9 +72,9 @@ button.onclick = function() {
           errorMessage = "Month must be between 1 and 12";
         }
       } else if (index === 2) { 
-        if (value < 1900 || value > new Date().getFullYear()) {
+        if (value < 1850 || value > new Date().getFullYear()) {
           isValid = false;
-          errorMessage = "Year must be between 1900 and " + new Date().getFullYear();
+          errorMessage = "Year must be between 1850 and " + new Date().getFullYear();
         }
       }
     }
