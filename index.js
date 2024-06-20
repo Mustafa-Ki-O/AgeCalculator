@@ -1,3 +1,4 @@
+
 let inpDay=document.querySelector(".day");
 let inpMonth=document.querySelector(".month");
 let inpYear=document.querySelector(".year");
@@ -10,6 +11,8 @@ let outMonth=document.querySelector(".outm")
 let outYear=document.querySelector(".outy")
 
 let button=document.querySelector("svg");
+
+
 
 function calculateAge(inpYearVal, inpMonthVal, inpDayVal) {
     
@@ -102,3 +105,22 @@ button.onclick = function() {
     outDay.textContent = c.days;
   }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  let sessionInfo = document.querySelector(".swal-button");
+  if (sessionInfo) {
+    sessionInfo.addEventListener("click", function() {
+      sessionStorage.setItem("session", "done");
+    });
+  } else {
+    let interval = setInterval(function() {
+      sessionInfo = document.querySelector(".swal-button");
+      if (sessionInfo) {
+        clearInterval(interval);
+        sessionInfo.addEventListener("click", function() {
+          sessionStorage.setItem("session", "done");
+        });
+      }
+    }, 100);
+  }
+});

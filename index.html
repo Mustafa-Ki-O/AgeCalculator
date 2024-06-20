@@ -25,7 +25,6 @@
         </div>
     </form>
     <div id="calc"><p></p><svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg></div>
-
     <div class="container text">
     <div>
         <h2 class="outy">--</h2>
@@ -42,5 +41,21 @@
 </div>
 </div>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+    <script>
+        if(!sessionStorage.getItem("session")){
+        setTimeout(function(){
+            swal({
+          title: 'How to use the app',
+          text: "1- Enter your date of birth in the fields above.\n2- Click on the circular icon in the middle to calculate the age.\n3- The age in years, months and days will appear at the bottom.",
+          icon: 'info',
+          button:"OK"
+        });
+        },1500)
+    }
+    else{
+        console.log("Session is saved")
+    }
+      </script>
 </body>
 </html>

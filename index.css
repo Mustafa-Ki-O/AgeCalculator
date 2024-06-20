@@ -115,6 +115,11 @@ form.container{
     border: 1.5px solid red;
 }
 
+.swal-footer{
+    display: flex;
+    justify-content: center;
+}
+
 @media(max-width:676px){
     .container1{
         width: 100%;
