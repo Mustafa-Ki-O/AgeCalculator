@@ -107,20 +107,13 @@ button.onclick = function() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  let sessionInfo = document.querySelector(".swal-button");
-  if (sessionInfo) {
-    sessionInfo.addEventListener("click", function() {
-      sessionStorage.setItem("session", "done");
-    });
-  } else {
     let interval = setInterval(function() {
-      sessionInfo = document.querySelector(".swal-button");
+    let  sessionInfo = document.querySelector(".swal-button");
       if (sessionInfo) {
         clearInterval(interval);
         sessionInfo.addEventListener("click", function() {
-          sessionStorage.setItem("session", "done");
+        sessionStorage.setItem("session", "done");
         });
       }
     }, 100);
-  }
 });
